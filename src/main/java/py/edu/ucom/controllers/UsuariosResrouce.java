@@ -7,12 +7,9 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
-import py.edu.ucom.entities.Usuarios;
-import py.edu.ucom.utils.DataSourceJSON;
-
 @Path("/usuarios")
 public class UsuariosResrouce {
-    @Inject
+    /* @Inject
     public DataSourceJSON ds;
 
     @GET
@@ -24,10 +21,10 @@ public class UsuariosResrouce {
     public Usuarios obtenerByDocumento(@PathParam("documento")String param){
         return this.ds.buscarUsuario(param);
     }
-
+ */
     @POST
-    public void guardar(Usuarios usuario){
-        this.ds.guardarUsuarios(usuario);
+    public void guardar(Object usuario){
+      //  this.ds.guardarUsuarios(usuario);
     }
     
 }
